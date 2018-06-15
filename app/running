@@ -1,0 +1,43 @@
+ .action-slider {
+    overflow-x:hidden;
+    display:flex;
+    p {
+        position:relative;
+        float:left;
+    }
+
+    .second {
+        position:relative;
+        display:flex;
+    }
+   
+    
+    &__item{ 
+        font-size:40px;
+        position:absolute;
+        display:inline-block;
+        transition:all 1s;
+        left:600px;
+        transform: skewX(-50deg);
+        opacity:0;
+        
+        &.next {
+            opacity:0;
+            transition:all 1s;
+           
+        }
+        &.visible {
+            transform: skewX(0);
+            left:0;
+            opacity: 1;
+        }
+        &.past {
+             font-size:0;
+             opacity:0;
+            
+            left: 0;
+            /* top: 0; */
+            transform: skewX(0deg);
+        }
+    }
+}

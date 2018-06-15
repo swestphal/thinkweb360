@@ -1,0 +1,96 @@
+.bordered-box {
+    background: #1e6393;
+    background: linear-gradient(135deg,#1e6393 0%,#27618a 20%,rgb(65, 119, 156) 82%,rgb(97, 139, 169) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e6393',endColorstr='#27618a',GradientType=1 );
+    padding:15px;
+    margin:30px;;
+
+    &__wrapper {
+        background:#fff;
+        padding:15px 0;
+    }
+
+    &__content {
+
+        margin:1.5rem 0;
+        @mixin atMedium {
+             display:flex;
+                align-items:center;
+        }
+       
+        &--title {
+            background:#ffffff;
+            padding:0 2rem;
+
+            @mixin atMedium {
+                padding:1rem 2rem;
+            }
+                h4 {
+                    margin-top:0;
+                    color:$twblue;
+                }
+                h4:before {
+                    content:"";
+                    width:40px;
+                    height:2px;
+                    position:relative;
+                    bottom:5px;
+                    background:$twblue;
+                    display:inline-block;
+                    margin-right:10px;
+                    @mixin atMedium {
+                        height:3px;
+                    }
+                }
+
+                h3 {
+                    margin-top:1rem;
+                    font-weight:400;
+                    color:$twblue;
+                    font-size:2rem;
+                    line-height:2rem;
+                    @mixin atMedium {
+                        font-size:2.8333333rem;
+                        line-height:3rem;
+                    }
+                }
+        }   
+
+       
+        &--title-left {
+             @mixin atMedium {
+                div.bordered-box__content--title {
+                    padding-left:0;
+                    margin-left:-15px;
+                    float:left;
+                }
+            }
+        }
+        &--title-right {
+            @mixin atMedium {
+                flex-direction:row-reverse;
+                div.bordered-box__content--title {
+                    padding-right:0;
+                    margin-right:-15px;
+                    float:right;
+                }
+            }
+        }
+
+        &>div {
+      
+                @mixin atMedium {
+                    width:50%;
+                }
+        } 
+     
+
+       &--text {
+           padding:2rem;
+           margin-top:0;
+           p:last-of-type {
+               margin-bottom:2.5rem;
+           }
+       }
+    }
+}

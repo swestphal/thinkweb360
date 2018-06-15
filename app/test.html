@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .row {
+            display: flex;
+            align-items:stretch;
+        }
+    .g1 {
+        background:yellow;
+     
+        width:40%;
+    }
+
+    .g2{
+        background: red;
+        width:60%;
+    }
+    .inner {
+    height: 81%;
+    background: green;
+    }
+    #outer {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background-color: white;
+  border: 1px solid red;
+}
+#middle {
+  flex-grow: 1;
+  flex-basis: 1px;
+  background-color: yellow;
+}
+#inner {
+  height: 100%;
+  background-color: lightgreen;
+}
+
+    </style>
+</head>
+<body>
+        <div class="row row-flex row--gutters outer">
+                <div class="g1 divided-block__info middle">
+                   <div class="inner">
+                    <ul class="checklist ">
+                        <li>Sie brauchen eine neue Webseite?</li>
+                        <li>Möchten Sie besser in den Suchmaschinen gefunden werden?</li>
+                        <li>Entspricht Ihre bestehende Seite nicht mehr Ihren Vorstellungen?</li>
+                        <li>Würden Sie gerne Ihre Produkte und Dienstleistungen über einem Onlineshop verkaufen?</li>
+                    </ul>
+                </div>
+                </div>
+                <div class="g2 divided-block__content">
+                    <h3>ThinkWeb360</h3>
+                   <p>
+                        Wir von der Webagentur ThinkWeb360 beraten Sie bei der Entwicklung Ihres Internetauftritts von Beginn an. 
+                        Als Internetagentur mit dem 360 Grad Blick bieten wir Ihnen einen vorausschauenden und nachhaltigen Fullservice rund um das Medium Internet.
+                   </p>
+                    <p>
+                        Von Domain und Hosting
+                        über Konzeption &  Gestaltung 
+                        bis zur Programmierung. 
+                    </p>
+                    <p>Und wir zeigen Ihnen, wie Sie Ihre Internetseite selber pflegen können. </p>
+                    <a href="#">Rufen Sie uns an!<br> 0800 - 360 360 9</a>
+                </div>
+            </div>
+</body>
+</html>

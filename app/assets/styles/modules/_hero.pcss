@@ -1,0 +1,223 @@
+.large-hero{
+    &::after{
+            content:'';
+            clear:both;
+            display:table;   
+    }
+    margin-top:114px;
+    display: flex;
+    display: -moz-box;
+    display: -webkit-flexbox;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: -moz-flex;
+    flex-direction: column;
+    @mixin atMedium {
+        flex-direction:row;
+    }
+}
+
+
+.large-hero__nav{
+    display: flex;
+       
+    margin-bottom:0;
+    list-style-type:none;
+    
+    flex-direction:column;
+    margin: 0 1.5rem 1.5rem 1.5rem;
+    @mixin atXSmall {
+        flex-wrap:wrap;
+        justify-content:center;      
+        -webkit-justify-content:center;
+    }
+   @mixin atSmall {
+       flex-direction:row;
+       
+   }
+    
+    @mixin atMedium {
+        position:relative;
+        flex-wrap:no-wrap;
+        margin-left:3em;   
+        flex-direction:column;
+        justify-content:space-around;      
+        -webkit-justify-content:space-around;
+        margin-bottom:0;
+    }
+    
+    &--item {
+        margin:0;
+        width:47%;
+        margin-top:1rem;
+        width:100%;
+        @mixin atSmall {
+            width:47%;
+        }
+        h3,
+        span.break {
+            text-transform:none;
+            margin:1rem;
+            margin-bottom:0;
+            font-size:1rem;
+            margin-top:.1rem;
+            font-weight:300;
+            letter-spacing:0;
+        }
+
+        span.break {
+            margin-left:0;
+        }
+
+        @mixin atSmall {
+            h3>span.break {
+                display:block;
+            }
+        }
+    
+        
+        
+        @mixin atXSmall {
+          
+        }
+        
+        @mixin atSmall {
+            h3,
+            span.break {
+                font-size:1.16rem;
+            }
+            width:47%;
+        }
+        
+        @mixin atMedium {
+            margin-top:0;
+            width:17rem;
+            margin:0;
+            h3,
+            span.break {
+                font-size:1.3888889rem;
+                margin:0;
+            }
+        }
+
+        
+        &:nth-of-type(1) span.col {
+            color:#136393;
+        }
+        
+        &:nth-of-type(2) span.col {
+            color:#8f8052;
+        }
+            
+        &:nth-of-type(3) span.col{
+            color:#88b02a;
+        } 
+            
+        &:nth-of-type(4) span.col {
+            color:#ea9907;
+        }
+    }
+}
+            
+
+
+.large-hero__slides{
+    width:100%;
+    height:max-content;
+    margin-bottom:0;
+    display: flex;
+    position:relative;
+    
+
+
+   
+    &-image { 
+        flex-shrink:0;
+        flex-basis: 100%;
+        height:300px;
+        background-size:cover;
+        background-repeat:no-repeat;
+        background-position-y:center;
+        background-image: url(../../assets/images/webdesign-oberlausitz-thinkweb360-458275459.png);
+        img {
+            visibility:hidden!important;
+        }
+        
+        @mixin atMedium {
+            height:500px;
+        }
+    }
+
+
+    &-teaser {
+        position:absolute;
+        background:rgba(239,239,239,.77);
+        padding:1rem;
+        width:100%;
+        height:100%;
+        right:0;
+        @mixin atMedium {    
+            height:80%;
+            width:80%;
+            margin:5% 10%;
+            height:auto;
+            width:auto;
+            margin:0;
+            background:rgba(255,255,255,.6);
+        
+            top:1.5rem;
+        }
+        @mixin atLarge {
+            right:1.5rem;
+        }
+        span {
+             color:$twbluegrey;
+            font-size:0.75em;
+            color:#88b02a;     
+                
+        }
+        p { color:$twbluegrey;
+            font-size:.75rem;
+            margin:.75rem 0;
+        }
+        h2 {
+            color:$twbluegrey;
+        }
+        h3 { color:$twbluegrey;
+            margin:0;
+            text-align:center;
+            &+p {
+                text-align:right;
+            }
+        }
+        &--starter {
+        
+           p {  
+                color:$twbluegrey;
+                font-size:1.3888889rem;
+                text-align:right;
+           }
+           h3,h2 { color:$twbluegrey;
+               font-size:1.8rem;
+               line-height: 3rem;
+           }
+        }
+    }
+
+    .btn {
+        float:right;
+    }
+   
+}
+
+
+
+
+
+
+
+
+
+
+
+

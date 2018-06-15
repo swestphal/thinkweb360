@@ -1,0 +1,58 @@
+@define-mixin clearfix {
+     &::after {
+        content:'';
+        clear:both;
+        display:table;
+    }
+}
+
+@define-mixin atXSmall {
+    @media (min-width:500px){
+        @mixin-content;
+    }
+}
+
+@define-mixin atSmall {
+    @media (min-width:640px) {
+        @mixin-content;
+    }
+}
+
+
+@define-mixin atMedium {
+    @media (min-width:780px) {
+        @mixin-content;
+    }
+}
+@define-mixin atLarge {
+    @media (min-width:992px) {
+        @mixin-content;
+    }
+}
+
+@define-mixin atMenuLarge{
+    @media (min-width:1070px){
+        @mixin-content;
+    }
+}
+
+@define-mixin atLargeMenu {
+    @media (min-width:940px){
+        @mixin-content;
+    }
+}
+
+
+@define-mixin upToLargeMenu {
+    @media (max-width:939px){
+        @mixin-content;
+    }
+}
+
+@define-mixin atXLarge {
+    @media (min-width:1190px){
+        @mixin-content;
+    }
+}
+
+

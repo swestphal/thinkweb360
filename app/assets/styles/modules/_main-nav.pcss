@@ -1,0 +1,224 @@
+.main-nav {
+    padding:1.5rem 0;
+    position:absolute;
+    top:0;
+    width:100%;
+    z-index:2;
+    background:#ffffff;
+    border-bottom:2px solid $twblue;
+    &__wrapper {
+        
+          max-width:1280px;
+        margin:0 auto;
+        background:#ffffff;
+    }
+
+    &__logo {
+        position:absolute;
+        padding-left:1rem;
+    }
+
+    &__menu-icon {
+        display:none;
+        @mixin upToLargeMenu {
+            display:block;
+            width: 30px;
+            height: 45px;
+            position: fixed;
+            right:12px;
+            -webkit-transform: rotate(0deg);
+            -moz-transform: rotate(0deg);
+            -o-transform: rotate(0deg);
+            transform: rotate(0deg);
+            -webkit-transition: .5s ease-in-out;
+            -moz-transition: .5s ease-in-out;
+            -o-transition: .5s ease-in-out;
+            transition: .5s ease-in-out;
+            cursor: pointer;
+            &:before {
+                    content: "";
+                    display: block;
+                    background: $twgreen;
+                    height: 50px;
+                    width: 55px;
+                    position: absolute;
+                    left: 2px;
+                    top: -12px;
+                    left: -13px;
+            }
+            span {
+                background-color:#ffffff;
+                display: block;
+                position: absolute;
+                height: 2px;
+                width: 100%;
+                border-radius: 9px;
+                left: 0;
+                -webkit-transform: rotate(0deg);
+                -moz-transform: rotate(0deg);
+                -o-transform: rotate(0deg);
+                transform: rotate(0deg);
+                -webkit-transition: .25s ease-in-out;
+                -moz-transition: .25s ease-in-out;
+                -o-transition: .25s ease-in-out;
+                transition: .25s ease-in-out;
+            }
+            span:nth-child(1) {
+                top: 4px;
+                -webkit-transform-origin: left center;
+                -moz-transform-origin: left center;
+                -o-transform-origin: left center;
+                transform-origin: left center;
+            }
+            span:nth-child(2) {
+                top: 13px;
+                -webkit-transform-origin: left center;
+                -moz-transform-origin: left center;
+                -o-transform-origin: left center;
+                transform-origin: left center;
+            }
+            span:nth-child(3) {
+                top: 22px;
+                -webkit-transform-origin: left center;
+                -moz-transform-origin: left center;
+                -o-transform-origin: left center;
+                transform-origin: left center;
+            }
+        
+    
+
+            &--is-open span:nth-child(1) {
+                -webkit-transform: rotate(45deg);
+                -moz-transform: rotate(45deg);
+                -o-transform: rotate(45deg);
+                transform: rotate(45deg);
+                top: 1px;
+                left: 0px;
+            }
+
+            &--is-open span:nth-child(2) {
+                top: 28px;
+                position: relative;
+                opacity: 0;
+            }
+
+            &--is-open span:nth-child(3) {
+                -webkit-transform: rotate(-45deg);
+                -moz-transform: rotate(-45deg);
+                -o-transform: rotate(-45deg);
+                transform: rotate(-45deg);
+                top: 23px;
+                left: 0px;
+            }
+        }
+    }
+
+    
+
+    &__items {
+        float:right;
+        
+
+        ul {
+            @mixin upToLargeMenu {
+                margin-top:73px;
+                height: auto;
+                border-left:1px solid white;
+                border-bottom:1px solid white;
+                position: fixed;
+                background-color: rgba($twblue,.9);
+                z-index: 100;
+                width: 200px;
+                top: 0;
+                right: 0;
+                z-index: 1;
+                transform: translateX(20rem);
+                transition: -webkit-transform .60s cubic-bezier(.58, -0.65, 0, 1.67);
+                overflow-y: scroll;
+                
+            }
+
+            .main-nav__items--sub-hide{
+                display:none;
+                @mixin atLargeMenu {
+                    display:none;
+                }
+            }
+            @mixin atLargeMenu {
+                margin:0;
+                padding:0;
+                display:flex;
+            }
+        }
+        
+        
+       
+        &--are-visible ul{
+            transform: translateX(0rem);
+            transition: -webkit-transform .60s cubic-bezier(.58, -0.65, 0, 1.67);
+            margin-top:73px;
+        }
+       
+        &--title {
+            font-size:.6rem;
+            font-weight:400;
+            display:block;
+            text-transform:none;
+            line-height:.6rem;
+            margin-left:1rem;
+            color:white;
+            @mixin atLargeMenu {
+            color:$darkgrey;
+            margin-left:0;
+            }
+        }
+
+       
+       
+       li {
+            
+            list-style-type:none;
+            padding: 1rem;
+           
+        
+            
+            @mixin atLargeMenu {
+                float:left;
+                padding:0 1rem;
+                align-self:center;
+            }
+            @mixin atMenuLarge {
+                padding:0 1.5rem;
+            }
+            @mixin atXLarge {
+                padding: 0 2rem;
+            }
+            a {
+                color:#ffffff;
+                @mixin atLargeMenu {
+                    color:$darkgrey;
+                }
+                font-family:'Roboto', sans-serif;
+
+            }
+       }
+    }
+    &__btn-container{
+       
+        float:right;
+        display:inline-block;
+        padding-right:1rem;
+        @mixin upToLargeMenu { 
+            width:100%;
+            
+            padding-left:0!important;
+            padding-right:0!important;
+        }
+        a {
+            margin:0;
+            text-align:center;
+            display:inline-block;
+            width:100%;
+            color:white!important;}
+    }
+}

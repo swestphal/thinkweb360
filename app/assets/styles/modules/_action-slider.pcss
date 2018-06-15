@@ -1,0 +1,60 @@
+ .action-slider {
+    padding:3rem 0;
+    overflow-x:hidden;
+    text-align:center;
+
+   
+    p {
+       font-size:2rem;
+        position:relative;
+    }
+
+&__wrapper {
+    display:flex;
+}
+   &__items {
+       margin:auto;
+       position:relative;
+       width:550px;
+       height:5rem;
+       line-height:3rem;
+       text-align:center;
+       span {
+       color:rgba($twblue,.8);
+       }
+   }
+    
+    &__item{ 
+        width:100%;
+        position:absolute;
+        font-size:10px;
+        display:inline-block;
+        opacity:0;
+        left:250%;
+        transition:left 1s ease-out, transform 1s ease-in, font-size .8s ease-in .2s;
+       
+        transform: skewX(-50deg);
+   
+
+        &.next {
+            opacity:0;
+            left:250%;
+            
+           
+        }
+        &.visible {
+            font-size:2.833rem;
+            transform: skewX(0);
+            left:0;
+            opacity: 1;
+        }
+        &.past {
+            font-size:0;
+            opacity:0;
+            transition:all .5s;
+            left: 0;
+            /* top: 0; */
+            transform: skewX(0deg);
+        }
+    }
+}

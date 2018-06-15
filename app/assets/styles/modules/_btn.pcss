@@ -1,0 +1,37 @@
+.btn {
+    margin-top:20px;
+    font-size:0.75rem;
+    letter-spacing:1px;
+    padding:1rem;
+    text-decoration:none;
+  
+    &--light {
+        color:$lightgrey;
+        background:rgba(255,255,255,.6);
+        
+        &:link, 
+        &:visited {
+            color:$darkgrey;
+        }
+
+        &:hover, 
+        &:active {
+            color:$darkgrey;
+        }
+    }
+
+    &--blue {
+        color:#ffffff;
+        background:$twblue;
+
+        &:link, 
+        &:visited {
+           background:rgba($twblue,.9);
+        }
+
+        &:hover, 
+        &:active {
+            background:$twblue;
+        }
+    }
+}
